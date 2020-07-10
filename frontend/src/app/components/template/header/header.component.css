@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav img {
+  height: 45px;
+}
+
+span i {
+  margin-left: 20px;
+  margin-right: 5px;
+}
