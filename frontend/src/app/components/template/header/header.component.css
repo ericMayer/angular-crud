@@ -1,9 +1,14 @@
+.nav-toolbar {
+  margin-bottom: 60px;
+}
+
 .nav {
   display: flex;
   align-items: center;
 }
 
 .nav a {
+  cursor: pointer;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -13,7 +18,16 @@
   height: 45px;
 }
 
-span i {
+.nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav p {
+  margin: 0px;
+}
+
+.nav ul li {
   margin-left: 20px;
   margin-right: 5px;
 }
