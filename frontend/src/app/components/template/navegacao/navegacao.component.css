@@ -1,0 +1,12 @@
+.sidenav {
+  background-color: #3f51b5;
+  width: 150px;
+}
+
+.nav-list a {
+  color: #fff;
+}
+
+.nav-list p + p {
+  margin-left: 10px;
+}
