@@ -8,12 +8,12 @@
     fixedBottomGap="64"
   >
     <mat-nav-list class="nav-list">
-      <a mat-list-item>
+      <a mat-list-item routerLink="">
         <p class="material-icons">home</p>
         <p>Início</p>
       </a>
 
-      <a mat-list-item>
+      <a mat-list-item routerLink="produtos">
         <p class="material-icons">store</p>
         <p>Produtos</p>
       </a>
@@ -21,6 +21,6 @@
   </mat-sidenav>
 
   <mat-sidenav-content class="content">
-    <app-content></app-content>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
