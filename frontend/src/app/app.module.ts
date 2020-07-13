@@ -16,6 +16,7 @@ import { ContentComponent } from "./views/content/content.component";
 
 import { ProdutoCrudComponent } from "./views/produto-crud/produto-crud.component";
 import { LinkDirective } from './directives/link.directive';
+import { ForDirective } from './directives/for.directive';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { LinkDirective } from './directives/link.directive';
     ContentComponent,
     ProdutoCrudComponent,
     LinkDirective,
+    ForDirective,
   ],
   imports: [
     BrowserModule,
