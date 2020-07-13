@@ -14,6 +14,8 @@ import { FooterComponent } from "./components/template/footer/footer.component";
 import { NavegacaoComponent } from "./components/template/navegacao/navegacao.component";
 import { ContentComponent } from "./views/content/content.component";
 
+import { ProdutoCrudComponent } from "./views/produto-crud/produto-crud.component";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +23,7 @@ import { ContentComponent } from "./views/content/content.component";
     FooterComponent,
     NavegacaoComponent,
     ContentComponent,
+    ProdutoCrudComponent,
   ],
   imports: [
     BrowserModule,
