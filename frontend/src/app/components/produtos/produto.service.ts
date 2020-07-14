@@ -42,4 +42,11 @@ export class ProdutoService {
     // return this.http.post<Produto>(this.url, produto);
     return this.http.post<Produto>(this.url, produto);
   }
+
+  // método que faz uma requisição na api para pegar
+  // os dados, esse método retorna um Observable que será
+  // uma lista de Produto
+  carregar(): Observable<Produto[]> {
+    return this.http.get<Produto[]>(this.url);
+  }
 }

@@ -34,6 +34,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
+import { ProdutoCarregarComponent } from './components/produtos/produto-carregar/produto-carregar.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { MatInputModule } from "@angular/material/input";
     LinkDirective,
     ForDirective,
     ProdutoCriarComponent,
+    ProdutoCarregarComponent,
   ],
   imports: [
     BrowserModule,
