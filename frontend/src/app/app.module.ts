@@ -45,6 +45,7 @@ import { MatSortModule } from "@angular/material/sort";
 // Moeda BRL
 import brl from "@angular/common/locales/pt";
 import { registerLocaleData as alterandoMoeda } from "@angular/common";
+import { ProdutoAtualizarComponent } from './components/produtos/produto-atualizar/produto-atualizar.component';
 
 alterandoMoeda(brl);
 
@@ -60,6 +61,7 @@ alterandoMoeda(brl);
     ForDirective,
     ProdutoCriarComponent,
     ProdutoCarregarComponent,
+    ProdutoAtualizarComponent,
   ],
   imports: [
     BrowserModule,
