@@ -1,3 +1,15 @@
 table {
   width: 100%;
 }
+
+.acoes-td a {
+  width: 40px;
+}
+
+.editar {
+  color: #3f51b5;
+}
+
+.deletar {
+  color: #b0b8e4;
+}
