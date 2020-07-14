@@ -1,19 +1,9 @@
 {
   "produtos": [
     {
-      "nome": "Notebook Acer Nitro 5",
-      "preco": 2300,
+      "nome": "Notebook",
+      "preco": "2000",
       "id": 1
-    },
-    {
-      "nome": "SSD M2 Samsung Nvme 480GB",
-      "preco": 800.5,
-      "id": 2
-    },
-    {
-      "nome": "Memória RAM Kingston DDR4",
-      "preco": 520.3,
-      "id": 3
     }
   ]
 }
