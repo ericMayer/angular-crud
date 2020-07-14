@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-produto-crud',
-  templateUrl: './produto-crud.component.html',
-  styleUrls: ['./produto-crud.component.css']
+  selector: "app-produto-crud",
+  templateUrl: "./produto-crud.component.html",
+  styleUrls: ["./produto-crud.component.css"],
 })
 export class ProdutoCrudComponent implements OnInit {
+  constructor(private rota: Router) {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  navegando(): void {
+    this.rota.navigate(["/produto/criar"]);
   }
-
 }
