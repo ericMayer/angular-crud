@@ -1,22 +1,39 @@
+// Módulos
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-
-import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { MatSidenavModule as SideNav } from "@angular/material/sidenav";
-import { MatListModule as List } from "@angular/material/list";
-import { MatToolbarModule } from "@angular/material/toolbar";
-import { MatCardModule } from "@angular/material/card";
 
+// Rotas
+import { AppRoutingModule } from "./app-routing.module";
+
+// Componentes
+import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./components/template/header/header.component";
 import { FooterComponent } from "./components/template/footer/footer.component";
 import { NavegacaoComponent } from "./components/template/navegacao/navegacao.component";
 import { ContentComponent } from "./views/content/content.component";
-
 import { ProdutoCrudComponent } from "./views/produto-crud/produto-crud.component";
-import { LinkDirective } from './directives/link.directive';
-import { ForDirective } from './directives/for.directive';
+import { ProdutoCriarComponent } from "./components/produtos/produto-criar/produto-criar.component";
+
+// Diretivas
+import { LinkDirective } from "./directives/link.directive";
+import { ForDirective } from "./directives/for.directive";
+
+// Imports Material
+import { MatSidenavModule as SideNav } from "@angular/material/sidenav";
+import { MatListModule as List } from "@angular/material/list";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatCardModule } from "@angular/material/card";
+import { MatButtonModule } from "@angular/material/button";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
+
+// Http
+import { HttpClientModule } from "@angular/common/http";
+
+// Formulários
+import { FormsModule } from "@angular/forms";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -28,6 +45,7 @@ import { ForDirective } from './directives/for.directive';
     ProdutoCrudComponent,
     LinkDirective,
     ForDirective,
+    ProdutoCriarComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +55,12 @@ import { ForDirective } from './directives/for.directive';
     SideNav,
     List,
     MatCardModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    HttpClientModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

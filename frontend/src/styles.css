@@ -35,3 +35,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.sucesso {
+  background-color: #3f51b5;
+  color: #fff;
+}
+
+.sucesso .mat-simple-snackbar-action {
+  color: #b0b8e4;
+}
