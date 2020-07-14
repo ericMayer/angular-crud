@@ -1,6 +1,6 @@
 // Módulos
 import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { NgModule, LOCALE_ID } from "@angular/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 // Rotas
@@ -34,6 +34,19 @@ import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
+import { ProdutoCarregarComponent } from "./components/produtos/produto-carregar/produto-carregar.component";
+
+import { LayoutModule } from "@angular/cdk/layout";
+import { MatIconModule } from "@angular/material/icon";
+import { MatTableModule } from "@angular/material/table";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatSortModule } from "@angular/material/sort";
+
+// Moeda BRL
+import brl from "@angular/common/locales/pt";
+import { registerLocaleData as alterandoMoeda } from "@angular/common";
+
+alterandoMoeda(brl);
 
 @NgModule({
   declarations: [
@@ -46,6 +59,7 @@ import { MatInputModule } from "@angular/material/input";
     LinkDirective,
     ForDirective,
     ProdutoCriarComponent,
+    ProdutoCarregarComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,8 +75,18 @@ import { MatInputModule } from "@angular/material/input";
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
+    LayoutModule,
+    MatIconModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: "pt-BR",
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
