@@ -49,4 +49,18 @@ export class ProdutoService {
   carregar(): Observable<Produto[]> {
     return this.http.get<Produto[]>(this.url);
   }
+
+  // método responsável por fazer a pesquisa do produto
+  // pelo id
+  pesquisaPorId(id: string): Observable<Produto> {
+    const url = `${this.url}/${id}`;
+    return this.http.get<Produto>(url);
+  }
+
+  // método responsável por fazer a atualização
+  // do produto
+  atualiza(produto: Produto): Observable<Produto> {
+    const url = `${this.url}/${produto.id}`;
+    return this.http.put<Produto>(url, produto);
+  }
 }
