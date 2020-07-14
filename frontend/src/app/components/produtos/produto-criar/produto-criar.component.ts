@@ -24,9 +24,15 @@ export class ProdutoCriarComponent implements OnInit {
   // o cadastro do produto, como ele retorna um observable
   // é usado o subscribe para que seja avisado quando finalizar,
   // assim será exibido a mensagem de sucesso após o cadastro
+  // está sendo o [(ngModel)] que é bidirecional, ou seja
+  // altera do typescript para o html e do html para o typescript,
+  // assim é pegado os valores de nome e preco, depois de cadastrado
+  // na api e feito a limpeza dos dois campos
   sucesso(): void {
     this.produtoService.cadastrar(this.produto).subscribe(() => {
       this.produtoService.mensagem("Cadastrado com sucesso!!!");
+      this.produto.nome = "";
+      this.produto.preco = "";
     });
   }
 

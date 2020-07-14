@@ -1,3 +1,7 @@
+.card {
+  max-width: 600px;
+}
+
 button + button {
   margin-left: 16px;
 }
@@ -12,4 +16,18 @@ button + button {
   background-color: #b0b8e4;
   color: #fff;
   font-size: 1.1rem;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.field {
+  border-color: #3f51b5 !important;
+}
+
+.field input {
+  color: #3f51b5 !important;
 }
