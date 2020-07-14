@@ -63,4 +63,10 @@ export class ProdutoService {
     const url = `${this.url}/${produto.id}`;
     return this.http.put<Produto>(url, produto);
   }
+
+  // método responsável por fazer a deleção do produto
+  deletar(id: string): Observable<Produto> {
+    const url = `${this.url}/${id}`;
+    return this.http.delete<Produto>(url);
+  }
 }
