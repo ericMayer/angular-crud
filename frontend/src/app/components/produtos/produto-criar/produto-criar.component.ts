@@ -30,7 +30,7 @@ export class ProdutoCriarComponent implements OnInit {
   // na api e feito a limpeza dos dois campos
   sucesso(): void {
     this.produtoService.cadastrar(this.produto).subscribe(() => {
-      this.produtoService.mensagem("Cadastrado com sucesso!!!");
+      this.produtoService.mensagem("Produto cadastrado com sucesso!!!");
       this.produto.nome = "";
       this.produto.preco = "";
     });

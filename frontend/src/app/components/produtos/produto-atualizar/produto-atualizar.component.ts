@@ -16,7 +16,10 @@ export class ProdutoAtualizarComponent implements OnInit {
     private rotaId: ActivatedRoute
   ) {}
 
-  produto: Produto;
+  produto: Produto = {
+    nome: "",
+    preco: null,
+  };
 
   // quando for iniciado o componente, seré pego o parâmtero id
   // que foi passado na url e depois será feito uma pesquisa por id
@@ -41,7 +44,7 @@ export class ProdutoAtualizarComponent implements OnInit {
   // dos produtos
   atualizar(): void {
     this.produtoService.atualiza(this.produto).subscribe(() => {
-      this.produtoService.mensagem("Alterado com sucesso!!!");
+      this.produtoService.mensagem("Produto alterado com sucesso!!!");
       this.rota.navigate(["produtos"]);
     });
   }
