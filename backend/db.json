@@ -1,8 +1,8 @@
 {
   "produtos": [
     {
-      "nome": "Notebook Acer Nitro 5",
-      "preco": 2300,
+      "nome": "Notebook Acer Nitro 6",
+      "preco": "2500",
       "id": 1
     },
     {
