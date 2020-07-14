@@ -11,6 +11,7 @@ export class ProdutoCarregarComponent implements OnInit {
   constructor(private produtoService: ProdutoService) {}
 
   produtos: Produto[];
+  colunas: Array<String> = ["id", "nome", "preco"];
 
   // foi criado um array de Produto e injetado a
   // classe do service de produto, é executado
