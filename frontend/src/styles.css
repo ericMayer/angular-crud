@@ -44,3 +44,12 @@ a {
 .sucesso .mat-simple-snackbar-action {
   color: #b0b8e4;
 }
+
+.erro .mat-simple-snackbar-action {
+  color: #3f51b5;
+}
+
+.erro {
+  background-color: #fff;
+  color: #e64301;
+}
