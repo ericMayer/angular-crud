@@ -1,4 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+ul,
+li,
+h1,
+h2,
+h3,
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.sucesso {
+  background-color: #3f51b5;
+  color: #fff;
+}
+
+.sucesso .mat-simple-snackbar-action {
+  color: #b0b8e4;
+}
+
+.erro .mat-simple-snackbar-action {
+  color: #3f51b5;
+}
+
+.erro {
+  background-color: #fff;
+  color: #e64301;
+}

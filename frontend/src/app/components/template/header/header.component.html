@@ -1,13 +1,16 @@
-<mat-toolbar class="nav">
-  <span>
-    <a>
+<mat-toolbar class="nav-toolbar">
+  <nav class="nav">
+    <a href="https://www.linkedin.com/in/ericaraujomayer/" target="_blank">
       <img src="../../../../assets/img/logo.png" alt="Logo" />
     </a>
-  </span>
 
-  <span>
-    <i class="material-icons">home</i>
-
-    Angular CRUD
-  </span>
+    <ul>
+      <li class="material-icons">
+        <a routerLink="{{ urlRota }}">
+          {{ icone }}
+        </a>
+      </li>
+      <p routerLink="{{ urlRota }}">{{ titulo }}</p>
+    </ul>
+  </nav>
 </mat-toolbar>

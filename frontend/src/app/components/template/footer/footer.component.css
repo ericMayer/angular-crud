@@ -1,0 +1,23 @@
+.footer-toolbar {
+  margin-top: 60px;
+  position: fixed;
+  bottom: 0;
+  background-color: #b0b8e4;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+}
+
+.footer p {
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin: 0px;
+  margin-right: 10px;
+}
+
+.footer a:hover {
+  cursor: pointer;
+  color: #0a65d5;
+}

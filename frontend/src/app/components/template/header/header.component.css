@@ -1,19 +1,37 @@
+.nav-toolbar {
+  /* margin-bottom: 60px; */
+  background-color: #b0b8e4;
+}
+
 .nav {
   display: flex;
   align-items: center;
 }
 
 .nav a {
+  cursor: pointer;
   display: flex;
   align-items: center;
   text-decoration: none;
+  color: #3f51b5;
 }
 
 .nav img {
   height: 45px;
 }
 
-span i {
+.nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav p {
+  margin: 0px;
+  cursor: pointer;
+  outline: none;
+}
+
+.nav ul li {
   margin-left: 20px;
   margin-right: 5px;
 }
