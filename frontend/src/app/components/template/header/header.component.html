@@ -5,8 +5,12 @@
     </a>
 
     <ul>
-      <li class="material-icons">home</li>
-      <p>Início</p>
+      <li class="material-icons">
+        <a routerLink="{{ urlRota }}">
+          {{ icone }}
+        </a>
+      </li>
+      <p routerLink="{{ urlRota }}">{{ titulo }}</p>
     </ul>
   </nav>
 </mat-toolbar>
