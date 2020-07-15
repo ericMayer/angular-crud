@@ -6,6 +6,14 @@ button + button {
   margin-left: 16px;
 }
 
+@media only screen and (max-width: 600px) {
+  button + button {
+    margin-left: 0px;
+    margin-top: 10px;
+    display: block;
+  }
+}
+
 .atualizar {
   background-color: #3f51b5;
   color: #fff;
@@ -31,4 +39,8 @@ button + button {
 
 .field input {
   color: #3f51b5 !important;
+}
+
+.title {
+  line-height: 1.6rem;
 }

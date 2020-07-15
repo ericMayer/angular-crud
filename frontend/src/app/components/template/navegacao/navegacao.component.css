@@ -1,6 +1,21 @@
 .sidenav {
   background-color: #3f51b5;
-  width: 150px;
+  max-width: 150px;
+  margin-bottom: 64px;
+  margin-top: 64px;
+
+  /*
+  fixedTopGap="64"
+    fixedBottomGap="64"
+  */
+}
+
+@media only screen and (max-width: 600px) {
+  .sidenav {
+    max-width: 50px;
+    margin-top: 56px;
+    margin-bottom: 56px;
+  }
 }
 
 .nav-list a {

@@ -2,6 +2,22 @@ table {
   width: 100%;
 }
 
+@media only screen and (max-width: 600px) {
+  table td,
+  table th {
+    padding: 0px;
+    padding-left: 10px;
+    font-size: 0.7rem;
+  }
+
+  .acoes-td a {
+  }
+
+  .acoes-td a {
+    width: auto;
+  }
+}
+
 .acoes-td a {
   width: 40px;
 }
