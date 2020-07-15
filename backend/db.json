@@ -2,8 +2,13 @@
   "produtos": [
     {
       "nome": "Notebook",
-      "preco": "2000",
+      "preco": "3000",
       "id": 1
+    },
+    {
+      "nome": "HD Externo 1TB Seagate",
+      "preco": "230.20",
+      "id": 2
     }
   ]
 }

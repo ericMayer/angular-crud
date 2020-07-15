@@ -2,7 +2,8 @@ import { Produto } from "./produto.model";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
+import { Observable, EMPTY } from "rxjs";
+import { map, catchError } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root",
@@ -23,13 +24,14 @@ export class ProdutoService {
   // usando mensagem de snackbar, adicionando
   // na direita e no topo, a duração será 3s,
   // terá um botão de fechar x e é adicionado a classe
-  // sucesso
-  mensagem(msg: string): void {
+  // sucesso a mensagem de erro será setada como falsa
+  // é só será alterada em caso de erro para true
+  mensagem(msg: string, erro: boolean = false): void {
     this.snackBar.open(msg, "x", {
       duration: 3000,
       horizontalPosition: "right",
       verticalPosition: "top",
-      panelClass: "sucesso",
+      panelClass: erro ? ["erro"] : ["sucesso"],
     });
   }
 
@@ -38,9 +40,17 @@ export class ProdutoService {
   // nesse caso um que será do tipo Produto
   // na requisição está sendo passada a url e o produto
   // que deve ser cadastrado
+  // é feito uma verificação se funcionou a requisição ou não
   cadastrar(produto: Produto): Observable<Produto> {
     // return this.http.post<Produto>(this.url, produto);
-    return this.http.post<Produto>(this.url, produto);
+    return this.http.post<Produto>(this.url, produto).pipe(
+      map((objeto) => {
+        return objeto;
+      }),
+      catchError((erro) => {
+        return this.pegandoErro(erro);
+      })
+    );
   }
 
   // método que faz uma requisição na api para pegar
@@ -52,21 +62,55 @@ export class ProdutoService {
 
   // método responsável por fazer a pesquisa do produto
   // pelo id
+  // é feito uma verificação se funcionou a requisição ou não
   pesquisaPorId(id: string): Observable<Produto> {
     const url = `${this.url}/${id}`;
-    return this.http.get<Produto>(url);
+    return this.http.get<Produto>(url).pipe(
+      map((objeto) => {
+        return objeto;
+      }),
+      catchError((erro) => {
+        return this.pegandoErro(erro);
+      })
+    );
   }
 
   // método responsável por fazer a atualização
   // do produto
+  // é feito uma verificação se funcionou a requisição ou não
   atualiza(produto: Produto): Observable<Produto> {
     const url = `${this.url}/${produto.id}`;
-    return this.http.put<Produto>(url, produto);
+    return this.http.put<Produto>(url, produto).pipe(
+      map((objeto) => {
+        return objeto;
+      }),
+      catchError((erro) => {
+        return this.pegandoErro(erro);
+      })
+    );
   }
 
   // método responsável por fazer a deleção do produto
+  // é feito uma verificação se funcionou a requisição ou não
   deletar(id: string): Observable<Produto> {
     const url = `${this.url}/${id}`;
-    return this.http.delete<Produto>(url);
+    return this.http.delete<Produto>(url).pipe(
+      map((objeto) => {
+        return objeto;
+      }),
+      catchError((erro) => {
+        return this.pegandoErro(erro);
+      })
+    );
+  }
+
+  // return um Observable vazio é passa a mensagem de erro e informa
+  // que ocorreu um erro
+  pegandoErro(erro: any): Observable<any> {
+    this.mensagem(
+      "Ocorreu um erro na aplicação, por favor tente mais tarde",
+      true
+    );
+    return EMPTY;
   }
 }
